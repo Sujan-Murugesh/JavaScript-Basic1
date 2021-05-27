@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Java Script Demo
+    </title>
+</head>
+<!-- calling Js function-->
+<script type="text/javascript">
+    //demo function....
+    function sayHello() {
+        document.write("Hello there...");
+    }
+</script>
+<!--===============================================================-->
+<!-- syntax-->
+<!--===============================================================-->
+<!--
+            <script language="javascript" type="text/javascript">
+                //javascript code here
+            </script>
+        -->
+<!--===============================================================-->
+<!--DEMO 1 :-->
+<!--===============================================================-->
+
+<body>
+
+    <p>
+        JavaScript is a dynamic computer programming language. It lightweight & most commonly used as part of web
+        pages.<br>
+        first known as LiveScript but Netscape changed it's name to JavaScript.
+    </p>
+    <script language="javascript" type="text/javascript">
+
+        document.write("Hello World...")
+        // var1= 10
+        // var2= 20
+        // document.write(var1 + var2)
+        // semicolon usage is optional one
+
+        //it's case sensitive
+        // apple = 12 
+        // APPLE = 15
+
+        // document.write("times ="+ apple +" TIMES ="+ APPLE);
+
+        /*===============================================
+            2. JavaScript Data types
+            numbers - 123,120.50 etc..
+            String "Hello world"
+            Boolean true false
+
+            JS also define 2 trival data types (null , undefined)
+
+            support composit data type called object
+        */
+
+        //Js Variables
+
+        var money;
+        var name;
+        var name, money;
+
+        //variable ainitialization
+
+        var a = 10;
+        var b = "sujan";
+        money = 15000.50;
+
+        // javascript is Untyped language
+        /* JS variables have only two scopes
+            1.Global variables   - can be access anywhere in the JS code
+            2.Local Variables    - can be used only functions.
+
+
+    <!--===============================================================-->
+            <!--DEMO 2 :-->
+    <!--===============================================================-->  
+        */
+        var myVar = "global";
+        function checkscope() {
+            var myVar = "local";
+            document.write(myVar);
+        }
+
+        checkscope();
+        /*
+            We also can call function within the tag like
+            <body onload = checkscope();>
+
+                variable name rules are:
+                1.Do not use JS reserved Keywords like (break,boolean)
+                2.Should not start with numbers (123test)
+                3.It must start with letter or underscore (a12 , _12ab)
+                4.Variables are case sensitive  (name != NAME)
+        */
+
+        // ===============================================================
+        //   js keywords :
+        // ===============================================================
+        /*
+                abstract    else        insranceof  switch
+                boolean     enum        int         synchronized
+                break       export      interface   this
+                byte        extends     long        throw
+                case        false       native      throws
+                catch       final       new         transiant
+                char        finally     null        true
+                class       float       package     try
+                const       for         private     typeof
+                continue    function    protected   var
+                debugger    goto        public      void
+                default     if          return      volatile
+                delete      implements  short       while
+                do          import      static      with
+                double      in          super
+        */
+
+        /*
+        // ===============================================================
+        //   operators :
+        // ===============================================================
+
+                1.Arithmetic    ==>    + , - , * , / , % , ++ , --
+                2.Comparison    ==>    == , != , > , < , >=, <=
+                3.Logical       ==>    &&-AND , || - OR ,   NOT !()
+                4.Bitwise       ==>    & , | , ^, ~ , << , >> , >>>
+                4.Assignment    ==>    = , += , -= , *= , /= ,%=
+                5.Conditional   ==>    conditinal operator(?:) and the typeof operator
+
+        */
+    </script>
+
+    <p>Arithmetic operators demo</p>
+    <script lang="javascript" type="text/javascript">
+
+        var a = 33;
+        var b = 10;
+        var c = "test";
+        var linebreak = "<br />";
+        document.write("a = " + a, "  |  b = " + b);
+        document.write(linebreak);
+        document.write("===============");
+        document.write(linebreak);
+
+        document.write("a + b = ");
+        result = a + b;
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("a - b = ");
+        result = a - b;
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("a * b = ");
+        result = a * b;
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("a / b = ");
+        result = a / b;
+        document.write(result);
+        document.write(linebreak);
+
+        document.write("a % b = ");
+        result = a % b;
+        document.write(result);
+        document.write(linebreak);
+
+        a = a++;
+        document.write("a++ = ");
+        result = a++;
+        document.write(result);
+        document.write(linebreak);
+
+        b = --b;
+        document.write(" --b = ");
+        result = --b;
+        document.write(result);
+        document.write(linebreak);
+        document.write(" ++b = ");
+        result = ++b;
+        document.write(result);
+
+
+        document.write(linebreak);
+        document.write(linebreak);
+    </script>
+
+    <p>Comparison operators demo</p>
+    <script lang="javascript" type="text/javascript">
+
+        var a = 10;
+        var b = 20;
+        var lb = "<br/>";
+
+
+
+        document.write("a = " + a, "|  b = " + b);
+        document.write(lb);
+        document.write("============");
+        document.write(lb);
+
+        document.write("a == b ==> ");
+        result = (a == b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a < b ==> ");
+        result = (a < b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a > b ==> ");
+        result = (a > b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a >= b ==> ");
+        result = (a >= b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a <= b ==> ");
+        result = (a <= b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a != b ==> ");
+        result = (a != b);
+        document.write(result);
+        document.write(lb);
+    </script>
+
+    <p>Logical operators demo</p>
+    <script lang="javascript" type="text/javascript">
+        var a = true;
+        var b = false;
+        var lb = "<br/>";
+
+        document.write("a = " + a, "  | b = " + b);
+        document.write(lb);
+        document.write("============");
+        document.write(lb);
+
+        document.write("a && b = ");
+        result = (a && b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("a || b = ");
+        result = (a || b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("!(a && b ) = ");
+        result = (!(a && b));
+        document.write(result);
+        document.write(lb);
+
+    </script>
+
+    <p>Bitwise operators demo</p>
+    <script lang="javascript" type="text/javascript">
+        var a = 2; //bit presemtation is 1 0
+        var b = 3; //bit presemtation is 1 1
+        var lb = "<br/>";
+
+
+        document.write("a = 2 bit is 1 0" + lb + "b = 3 bit is 1 1" + lb + "=================" + lb);
+
+        document.write("(a & b) == > ");
+        result = (a & b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("(a | b) == > ");
+        result = (a | b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("(a ^ b) == > ");
+        result = (a ^ b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("( ~b) == > ");
+        result = (~b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("(a << b) == > ");
+        result = (a << b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("(a >> b) == > ");
+        result = (a >> b);
+        document.write(result);
+        document.write(lb);
+    </script>
+
+    <p>Assignment operators demo</p>
+    <script lang="javascript" type="text/javascript">
+        var a = 33;
+        var b = 10;
+        var lb = "<br/>";
+
+        document.write("a = " + a + "  b = " + b + lb + "=================" + lb);
+
+        document.write("Value of a => (a = b) => ");
+        result = (a = b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("Value of a => (a += b) => ");
+        result = (a += b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("Value of a => (a -= b) => ");
+        result = (a -= b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("Value of a => (a *= b) => ");
+        result = (a *= b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("Value of a => (a /= b) => ");
+        result = (a /= b);
+        document.write(result);
+        document.write(lb);
+
+        document.write("Value of a => (a %= b) => ");
+        result = (a %= b);
+        document.write(result);
+        document.write(lb);
+    </script>
+
+    <p>Miscellaneous operators demo <br>
+        two operators are there 1. conditinal operator(? :) 2. typeof operator<br />
+
+        If Condition is true? then value X:<br>
+        Otherwise value Y.
+    </p>
+
+    <script lang="javascript" type="text/javascript">
+        var a = 10;
+        var b = 20;
+        var lb = "<br/>";
+
+        document.write("a = " + a + "  b = " + b + lb + "=================" + lb);
+
+        document.write("((a > b) ? 100 : 200 ==> ");
+        result = (a > b) ? 100 : 200;
+        document.write(result);
+        document.write(lb);
+
+        document.write("((a < b) ? 100 : 200 ==> ");
+        result = (a < b) ? 100 : 200;
+        document.write(result);
+        document.write(lb);
+    </script>
+
+    <p>
+        typeof operator is a unary operator that placed before its single operand,which can be of any type.Its value is
+        a string indicating the data type of the operand.
+
+    <table border="1">
+        <th>Type</th>
+        <th>String Return bt typeof</th>
+        <tr>
+            <td>Number</td>
+            <td>"number"</td>
+        </tr>
+        <tr>
+            <td>String</td>
+            <td>"string"</td>
+        </tr>
+        <tr>
+            <td>Boolean</td>
+            <td>"boolean"</td>
+        </tr>
+        <tr>
+            <td>Object</td>
+            <td>"object"</td>
+        </tr>
+        <tr>
+            <td>Function</td>
+            <td>"function"</td>
+        </tr>
+        <tr>
+            <td>Undefined</td>
+            <td>"undefined"</td>
+        </tr>
+        <tr>
+            <td>Null</td>
+            <td>"object"</td>
+        </tr>
+    </table>
+
+    </p>
+
+    <p>typeof operator demo :
+
+        <br>
+        1. result = (typeof b == "string" ? "B is String" : "B is Numeric"); <br>
+        2. result = (typeof a == "string" ? "A is String" : "A is Numeric"); <br>
+
+    </p>
+    <script lang="javascript" type="text/javascript">
+        var a = 10;
+        var b = "String";
+        var lb = "<br/>";
+
+        document.write("a = " + a + "  b = " + b + lb + "=================" + lb);
+
+        result = (typeof b == "string" ? "B is String" : "B is Numeric");
+        document.write("Result ==> ");
+        document.write(result);
+        document.write(lb);
+
+        result = (typeof a == "string" ? "A is String" : "A is Numeric");
+        document.write("Result ==> ");
+        document.write(result);
+        document.write(lb);
+
+    </script>
+
+    <p>
+    <h2>If else in JavaScript .</h2> <br> Js support following forms of if..else statements.</p>
+    <ul>
+        <li>
+            if statement
+        </li>
+        <li>
+            if .. else statement
+        </li>
+        <li>
+            if .. else ..if.. statement
+        </li>
+    </ul>
+
+    <p>
+        The syntax for a basic if statement is as follows<br>
+        if (expression) {
+        statement(s) to be executed if expression is true
+        }<br>
+
+        ex 1:<br>
+        var age = 20;<br>
+
+        if(age > 18 ){<br>
+        document.write("<b> Adult </b>");<br>
+        }
+    </p>
+
+    <script type="text/javascript">
+        /*
+        // ===============================================================
+        //   If else demo
+        // ===============================================================
+        */
+        var age = 20;
+
+        if (age > 18) {
+            document.write("<b> Adult </b>");
+        } else {
+            document.write("<b> does not qualified..</b>");
+        }
+    </script>
+
+    <script type="text/javascript">
+        var book = "maths";
+        if (book == "history") {
+            document.write("History book");
+        }
+        else if (book == "maths") {
+            document.write("Math book");
+        }
+        else if (book == "economics") {
+            document.write("economics book");
+        }
+        else {
+            document.write("Unknown Book");
+        }
+    </script>
+
+    <p>
+        Switch case demo <br>
+    <pre>
+                var grade = 'A';
+                document.write("Entering Switch block<br>");
+                switch (grade) {
+                    case 'A': document.write("good job");
+                        break;
+                    case 'B': document.write("pretty good");
+                        break;
+                    case 'C': document.write("passed");
+                        break;
+                    case 'D': document.write("no so good");
+                        break;
+                    case 'F': document.write("Failed");
+                        break;
+                    default:  document.write("Unknown grade");
+                        break;
+                }
+            </pre>
+    </p>
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   Switch case demo
+        // ===============================================================
+        */
+
+        var grade = 'A';
+        document.write("Entering Switch block<br>");
+
+        switch (grade) {
+            case 'A': document.write("good job");
+                break;
+            case 'B': document.write("pretty good");
+                break;
+            case 'C': document.write("passed");
+                break;
+            case 'D': document.write("no so good");
+                break;
+            case 'F': document.write("Failed");
+                break;
+            default: document.write("Unknown grade");
+                break;
+        }
+
+    </script>
+
+    <pre>
+            while loop in Js
+
+            var count = 0;
+            document.write("Starting loop ");
+
+            while (count < 10 ) {
+                document.write("current count : "+count+"<br/>");
+                count++;
+            }
+        </pre>
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   While loop demo
+        // ===============================================================
+        */
+
+        var count = 0;
+        document.write("Starting loop ");
+
+        while (count < 10) {
+            document.write("current count : " + count + "<br/>");
+            count++;
+        }
+
+
+    </script>
+    <pre>
+            /**
+            // ===============================================================
+            //   for loop demo
+            // ===============================================================
+            */
+            var count;
+            document.write("Starting loop ");
+
+            for (count = 0; count < 10 ; count++) {
+                document.write("current count : "+count+"<br/>");
+            }
+        </pre>
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   for loop demo
+        // ===============================================================
+        */
+        var count;
+        document.write("Starting loop <br/>");
+
+        for (count = 0; count < 10; count++) {
+            document.write("current count : " + count + "<br/>");
+        }
+
+    </script>
+
+    <pre>
+            //The break statement
+        var x = 1;
+        document.write("Entering loop <br/>");
+
+        while (x < 20) {
+            if (x == 5 ) {
+                break;  // break out of loop completely
+            }
+            x = x +1;
+            document.write(x +"<br/>");
+        }
+
+        //continue statement
+        var c = 1;
+        document.write("Entering loop <br/>");
+
+            while (c < 10) {
+                c = c + 1;
+                if (c == 5) {
+                    continue; //skip rest of the loop boady
+                }
+                document.write(x+"<br/>");
+            }
+            document.write("ending loop");
+        </pre><br>
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   loop control demo
+        // ===============================================================
+        */
+
+        //The break statement
+        var x = 1;
+        document.write("Entering loop <br/>");
+
+        while (x < 20) {
+            if (x == 5) {
+                break;  // break out of loop completely
+            }
+            x = x + 1;
+            document.write(x + "<br/>");
+        }
+    </script>
+
+    <script type="text/javascript">
+        //continue statement
+        var c = 1;
+        document.write("Entering loop <br/>");
+
+        while (c < 10) {
+            c = c + 1;
+            if (c == 5) {
+                continue; //skip rest of the loop boady
+            }
+            document.write(c + "<br/>");
+        }
+        document.write("ending loop");
+    </script>
+
+    <pre>
+        /**
+        // ===============================================================
+        //   Using labels to control the flow
+        // ===============================================================
+        */
+
+        document.write("Entering loop <br/>");
+        outerloop: //this is the label name
+        for (var i =0; i < 5;  i++) {
+            document.write("outerloop : "+i+"<br/>");
+            innerloop:
+            for(var j =0; j < 5 ; j++){
+                if (j > 3) {
+                    break; //quit the innermost loop
+                }
+                if (i == 2) {
+                    break innerloop; // do the same thing
+                }
+                if (i == 4) {
+                    break outerloop; //quit the outerloop
+                }
+                document.write("Innerloop : "+j+"<br/>");
+            }
+        }
+        document.write("ending loop");
+        </pre><br>
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   Using labels to control the flow
+        // ===============================================================
+        */
+
+        document.write("Entering loop <br/>");
+        outerloop: //this is the label name
+        for (var i = 0; i < 5; i++) {
+            document.write("outerloop : " + i + "<br/>");
+            innerloop:
+            for (var j = 0; j < 5; j++) {
+                if (j > 3) {
+                    break; //quit the innermost loop
+                }
+                if (i == 2) {
+                    break innerloop; // do the same thing
+                }
+                if (i == 4) {
+                    break outerloop; //quit the outerloop
+                }
+                document.write("Innerloop : " + j + "<br/>");
+            }
+        }
+        document.write("ending loop");
+    </script>
+
+    <pre>
+            JavaScript Function demo:
+            function is a group of reusable code which can be called anywhere in your program.
+
+            1.define a function usign function keyword
+            Syntax 
+            function funcName(parameter-list){
+                statements....
+            }
+        </pre>
+
+    <script type="text/javascript">
+
+        function sayHello(name, age) {
+            alert("Name is " + name + " age is : " + age);
+        }
+
+    </script>
+
+    <pre>
+            Click the following btn to call the function
+        </pre>
+    <form>
+        <input type="button" onclick="sayHello('sujan',25)" value="Say Hello">
+    </form>
+
+    <pre>Return statements</pre>
+    <script type="text/javascript">
+        function concadanate(first, last) {
+            var full;
+            full = first + last;
+            return full;
+        }
+
+        function secondFunction() {
+            var result;
+            result = concadanate('Sujan', 'Murugesh');
+            document.write(result);
+        }
+
+        //===================================================
+
+        function sayBye() {
+            alert("Hello world");
+        }
+    </script>
+
+    <form>
+        <input type="button" onclick="secondFunction()" value="Call the second function">
+    </form>
+
+    <p>
+        Event in JavaScript.
+    <pre>
+                JS interaction with html is handled through Events that occur when the user or the browser manipulates a page.
+                when ht page is load it's called an event. when the user click the button etc.
+                we use these Events to execute JavaScript coded responses.
+
+                Events are part of the Document Object Model (DOM) Level 3 & every HTML elements contains a set of events which can
+                trigger JavaScript Code.
+
+                onclick event type
+                ex:
+
+                    function sayBye(){
+                        alert("Hello world");
+                    }
+
+                    // calling the function
+                    <form>
+                        <input type="button" onclick="sayBye()" value="Say something..."/>
+                    </form>
+            </pre>
+    </p>
+
+    <p>
+        On submit function.
+    </p>
+    <script type="text/javascript">
+        function validation() {
+            if (!empty(email) && !empty(pwd)) {
+                return "Validated...";
+            }
+            else {
+                return "fillout the feilds";
+            }
+        }
+
+    </script>
+
+    <form method="POST" action="" onsubmit="return validation()">
+        <input type="email" placeholder="email" id="email" /><br>
+        <input type="password" placeholder="password" id="pwd"><br />
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <script type="text/javascript">
+        /**
+        // ===============================================================
+        //   Onmouseover and onmouseout function demo
+        // ===============================================================
+        */
+
+        function over() {
+            document.write("Mouse Over");
+        }
+
+        function out() {
+            document.write("Mouse out");
+        }
+    </script>
+
+    <p>
+    <pre>
+                            Bringing mouse inside the division to see the results.
+
+                            <!-- <div onmouseover="over()" onmouseout="out()">
+                                <h2>This is the division....</h2>
+                            </div>                         -->
+            </pre>
+    </p>
+
+
+    <script>
+        /**
+        // ===============================================================
+        //  Cookies in Js
+        // ===============================================================
+
+        Store cookies
+            document.cookie = "key1 = value1; key2 = value2;  expires = date";
+            Cookies values may not include semicolons,commas,or whitespace, ---> For this reason we using 
+            Javascript escape() function to encode the values before we storing it in the cookies. if you do
+            this, you will also have to use the corressponding unescape() function when you read the cookies value.
+        */
+
+        // ===============================================================
+        //  Cookies writing....
+        // ===============================================================
+        function WriteCookies() {
+            if (document.myForm.customer.value == "") {
+                alert("enter some value...");
+                return;
+            }
+            // cookievalue = escape(document.myForm.customer.value) + ";";
+            // document.cookie = "name" + cookievalue;
+            // document.write("Setting Cookies : " + "name = "+ cookievalue);
+
+
+            //setting cookies with expiry date
+
+            var now = new Date();
+            now.setMonth(now.getMonth() + 1);
+            cookievalue = escape(document.myForm.customer.value) + ";";
+
+
+            document.cookie = "name" + cookievalue;
+            document.cookie = "expires = " + now.toUTCString() + ";"
+            document.write("Setting Cookies : " + "name = " + cookievalue);
+        }
+    </script>
+
+    <!-- setting cookies-->
+    <form name="myForm" action="">
+        Enter Name : <input type="text" name="customer" />
+        <input type="button" value="Set Cookie" onclick="WriteCookies();" />
+    </form>
+
+
+    <!--
+        // ===============================================================
+        //   reading cookies  
+        // ===============================================================
+        -->
+    <script type="text/javascript">
+        function ReadCookies() {
+            var allcookies = document.cookie;
+            document.write("All cookies : " + allcookies);
+
+            //Get all the cookies pairs in an array
+            cookiearray = allcookies.split(';');
+
+            //now take key value pair out of this array
+            for (var i = 0; i < cookiearray.length; i++) {
+                name = cookiearray[i].split('=')[0];
+                value = cookiearray[i].split('=')[1];
+                document.write("Key is : " + name + " and Value is : " + value);
+
+            }
+        }
+    </script>
+
+    <form name="myForm1" action="">
+        <p> Read the cookies</p>
+        <input type="button" value="Get Cookies" onclick="ReadCookies()" />
+    </form>
+
+    <!--
+        // ===============================================================
+        //   deleting cookies  
+        // ===============================================================
+        -->
+
+    <script type="text/javascript">
+
+        function deleteCookies(params) {
+            var now = new Date();
+            now.setMonth(now.getMonth() - 1);  //here is the different....
+            cookievalue = escape(document.myForm.customer.value) + ";";
+
+            document.cookie = "name" + cookievalue;
+            document.cookie = "expires = " + now.toUTCString() + ";"
+            document.write("Setting Cookies : " + "name = " + cookievalue);
+        }
+    </script>
+
+    <p>HTML DOM  - Document Object Model  
+        <pre>
+                The objects are organized in the hierarchy.This structure applies to the 
+                organization of the objects in a web document.
+
+                1.Window Object 
+                2.Document Object
+                3.Form Object
+                4.Form Control elemrnts
+        </pre>
+    </p>
+
+    <!--
+        // ===============================================================
+        //   Error Handing
+        // ===============================================================
+        -->
+
+        <script type="text/javascript">
+            function myFuncErr() {
+                var a = 1500;
+                try {
+                    alert("value of variable a is : "+a);
+                } catch (e) {
+                    alert("Error : "+ e.description);
+                }
+            }
+        </script>
+
+        <p>
+            Test error Handing function.
+            <pre>
+                <form>
+                    <input type="button" value="Clicke me!" onclick="myFuncErr();"/>
+                </form>
+            </pre>
+        </p>
+
+        
+         <!--
+        // ===============================================================
+        //   Script for Browser detection,.....
+        // ===============================================================
+        -->
+
+        <script type="text/javascript">
+            var userAgent   = navigator.userAgent;
+            var opera       = (userAgent.indexOf('Opera') != -1);
+            var ie          = (userAgent.indexOf('MSIE') != -1);
+            var gecko       = (userAgent.indexOf('Gecko') != -1);
+            var netscape    = (userAgent.indexOf('Mozilla') != -1);
+            var version     = navigator.appVersion;
+
+            if (opera) {
+                document.write("Opera based Browser...");
+            } else if (gecko) {
+                document.write("Mozila based Browser...");
+            } else if (ie){
+                document.write("IE based Browser...");
+            }else if (netscape){
+                document.write("Netscape based Browser...");
+            }else{
+                document.write("Unknown Browser...");
+            }
+
+            document.write("<br/> Browser version information : "+version);
+        </script>
+
+
+</body>
+</html>
